@@ -1,0 +1,295 @@
+Idea Evaluation UI (Landing Page Mock)
+
+Design a 4:3 product mock UI for a SaaS tool called Creator Content Strategy Copilot.
+The UI represents the Idea Evaluation feature used by YouTube creators to evaluate whether a video topic is worth producing.
+
+The UI should clearly illustrate the flow:
+
+Input Idea → AI Analysis → Recommendation
+
+The mock should look like a real product screenshot, suitable for a landing page hero section.
+
+Visual Style
+
+Design Style
+
+minimal modern SaaS UI
+
+clean grid layout
+
+high information density
+
+strong visual hierarchy
+
+sharp typography
+
+rounded cards
+
+subtle shadows
+
+minimal text, more visual indicators
+
+Theme
+
+Smart / AI / strategic decision theme
+
+Color palette
+
+Primary accent:
+Electric Blue #4F7FFF
+
+Secondary accent:
+Deep Indigo #2D3B8F
+
+Background:
+Very light gray #F7F9FC
+
+Cards:
+White
+
+Highlight gradient for recommendation:
+Blue → Violet gradient
+
+Typography
+
+Headline: Inter / Satoshi style modern SaaS font
+Metrics: bold numeric style
+
+Layout Structure (4:3 canvas)
+
+Three horizontal sections:
+
+1️⃣ Idea Input Bar (top)
+2️⃣ AI Reasoning Metrics (middle)
+3️⃣ Actionable Recommendation (bottom — visually dominant)
+
+Section 1 — Idea Input
+
+Small card at the top.
+
+Left side label:
+
+VIDEO IDEA
+
+Input field style.
+
+Example idea text:
+
+“Why Cheap Laptops Are Getting Worse in 2025”
+
+To the right:
+
+Small glowing AI badge:
+
+AI Strategy Analysis
+
+Include a subtle animated thinking indicator:
+
+3 small dots or pulse.
+
+Below the input bar add a thin arrow pointing downward.
+
+Section 2 — AI Evaluation Metrics
+
+Grid of 5 compact metric cards.
+
+Each card contains:
+
+metric name
+
+score
+
+colored indicator bar
+
+small insight label
+
+Use visual meters instead of text.
+
+Metrics:
+
+Audience Fit
+
+Score example:
+
+82 / 100
+
+Label:
+
+Strong
+
+Mini description:
+
+“High overlap with your current audience.”
+
+Viewer Demand
+
+Score:
+
+74 / 100
+
+Label:
+
+Rising
+
+Indicator color:
+
+green
+
+Mini insight:
+
+“Strong performance across similar channels.”
+
+Growth Contribution
+
+Score:
+
+78 / 100
+
+Label:
+
+Audience Expansion
+
+Mini icon showing audience growth arrow.
+
+Execution Risk
+
+Risk level indicator.
+
+High
+
+Use yellow/orange risk bar.
+
+Mini insight:
+
+“Needs strong packaging to stand out.”
+
+Timing Strength
+
+Label:
+
+Good Timing
+
+Indicator:
+
+clock icon + green signal.
+
+Mini insight:
+
+“Interest currently trending upward.”
+
+Section 3 — Recommendation (Hero Element)
+
+This section should be the largest and most visually dominant card.
+
+Gradient background.
+
+Title:
+
+AI Recommendation
+
+Main verdict badge:
+
+TEST SOON
+
+Large bold pill label.
+
+Color:
+
+Blue gradient.
+
+Strategic Role
+
+Small labeled chip:
+
+Expansion Video
+
+Icon:
+
+expanding arrows.
+
+Reasoning Summary
+
+One concise sentence:
+
+Strong audience fit and rising demand.
+Needs a sharper angle to reduce execution risk.
+
+Next Best Action (Actionable Area)
+
+This should be the most visually striking element.
+
+Three suggested improvements displayed as clickable cards.
+
+Option 1
+
+Best Budget Laptops Under $500
+
+Tag:
+
+Safe Version
+
+Option 2
+
+Why Cheap Laptops Are Getting Worse
+
+Tag:
+
+Growth Angle
+
+Option 3
+
+Are $300 Laptops a Scam?
+
+Tag:
+
+High-CTR Hook
+
+Each suggestion card includes:
+
+small lightning icon
+hover highlight effect
+
+Visual Flow Cues
+
+Add subtle arrows showing the reasoning flow:
+
+Idea Input
+↓
+AI Analysis
+↓
+Recommendation
+
+Use thin gradient arrows.
+
+Additional UI Elements
+
+Small subtle labels:
+
+Top left of UI:
+
+Idea Evaluation
+
+Top right corner:
+
+AI icon + label
+
+Strategy Engine
+
+Overall Design Goals
+
+The UI should instantly communicate:
+
+AI evaluates ideas
+
+the system analyzes multiple signals
+
+the output is a clear strategic recommendation
+
+creators receive actionable next steps
+
+The visual impression should feel:
+
+smart, strategic, data-driven, and creator-focused.
+
+Avoid clutter.
+Use visual meters, labels, and cards instead of paragraphs.
