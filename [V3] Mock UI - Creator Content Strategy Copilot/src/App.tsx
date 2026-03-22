@@ -23,7 +23,7 @@ const nextVideoIdeas = [
   'Why Cheap Laptops Fail',
 ]
 
-export default function CreatorContentStrategyCopilotMock() {
+export default function App() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950 px-6 py-8 text-slate-100">
       <div className="pointer-events-none absolute -left-20 -top-16 h-80 w-80 rounded-full bg-violet-700/20 blur-3xl" />
@@ -170,7 +170,7 @@ export default function CreatorContentStrategyCopilotMock() {
 
           <aside className="w-[33%] rounded-2xl border border-violet-300/25 bg-gradient-to-br from-violet-900/35 via-slate-900/80 to-slate-900/70 p-5 shadow-[0_0_40px_rgba(124,58,237,0.2)]">
             <h3 className="text-xl font-semibold text-white">Recommended Next Move</h3>
-            <p className="mt-4 text-[11px] uppercase tracking-[0.12em] text-slate-400">Topic</p>
+            <p className="mt-4 text-[11px] uppercase tracking-[0.12em] text-slate-400">TOPIC</p>
             <p className="mt-1 text-3xl font-semibold leading-tight text-white">Budget Laptop Comparisons</p>
 
             <div className="mt-3 inline-flex items-center rounded-full border border-emerald-300/30 bg-emerald-400/15 px-3 py-1 text-xs font-semibold text-emerald-200">
@@ -184,7 +184,7 @@ export default function CreatorContentStrategyCopilotMock() {
             </ul>
 
             <div className="mt-5 rounded-xl border border-white/10 bg-slate-900/60 p-4">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-slate-400">Next Video Ideas</p>
+              <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-slate-400">NEXT VIDEO IDEAS</p>
               <div className="mt-3 space-y-2">
                 {nextVideoIdeas.map((idea) => (
                   <p key={idea} className="rounded-lg border border-white/10 bg-white/[0.04] px-3 py-2 text-sm text-slate-200">{idea}</p>
