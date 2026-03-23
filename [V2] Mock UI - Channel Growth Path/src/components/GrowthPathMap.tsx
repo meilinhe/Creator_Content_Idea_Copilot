@@ -80,17 +80,17 @@ const GrowthPathMap = ({ paths }: GrowthPathMapProps) => {
       </div>
 
       <div className="path-tree">
-        <svg className="connectors" viewBox="0 0 1000 210" preserveAspectRatio="none" aria-hidden>
+        <svg className="connectors" viewBox="0 0 1000 170" preserveAspectRatio="none" aria-hidden>
           <defs>
-            <linearGradient id="leftBranch" x1="500" y1="10" x2="180" y2="170" gradientUnits="userSpaceOnUse">
+            <linearGradient id="leftBranch" x1="500" y1="10" x2="167" y2="126" gradientUnits="userSpaceOnUse">
               <stop offset="0%" stopColor="#4F7DF3" />
               <stop offset="100%" stopColor="#6E8FF5" />
             </linearGradient>
-            <linearGradient id="centerBranch" x1="500" y1="10" x2="500" y2="170" gradientUnits="userSpaceOnUse">
+            <linearGradient id="centerBranch" x1="500" y1="10" x2="500" y2="126" gradientUnits="userSpaceOnUse">
               <stop offset="0%" stopColor="#4F7DF3" />
               <stop offset="100%" stopColor="#4F7DF3" />
             </linearGradient>
-            <linearGradient id="rightBranch" x1="500" y1="10" x2="820" y2="170" gradientUnits="userSpaceOnUse">
+            <linearGradient id="rightBranch" x1="500" y1="10" x2="833" y2="126" gradientUnits="userSpaceOnUse">
               <stop offset="0%" stopColor="#6E8FF5" />
               <stop offset="100%" stopColor="#8A5CF6" />
             </linearGradient>
@@ -103,13 +103,14 @@ const GrowthPathMap = ({ paths }: GrowthPathMapProps) => {
             </filter>
           </defs>
 
-          <path d="M500 10 C390 38 300 92 180 170" className="line" stroke="url(#leftBranch)" />
-          <path d="M500 10 C500 35 500 92 500 170" className="line" stroke="url(#centerBranch)" />
-          <path d="M500 10 C610 38 700 92 820 170" className="line" stroke="url(#rightBranch)" />
+          <path d="M500 8 C400 24 300 78 167 126" className="line" stroke="url(#leftBranch)" />
+          <path d="M500 8 C500 28 500 82 500 126" className="line" stroke="url(#centerBranch)" />
+          <path d="M500 8 C600 24 700 78 833 126" className="line" stroke="url(#rightBranch)" />
 
-          <circle cx="180" cy="170" r="5" fill="#6E8FF5" filter="url(#nodeGlow)" />
-          <circle cx="500" cy="170" r="5" fill="#4F7DF3" filter="url(#nodeGlow)" />
-          <circle cx="820" cy="170" r="5" fill="#8A5CF6" filter="url(#nodeGlow)" />
+          <circle cx="500" cy="8" r="6" fill="#4F7DF3" filter="url(#nodeGlow)" />
+          <circle cx="167" cy="126" r="5" fill="#6E8FF5" filter="url(#nodeGlow)" />
+          <circle cx="500" cy="126" r="5" fill="#4F7DF3" filter="url(#nodeGlow)" />
+          <circle cx="833" cy="126" r="5" fill="#8A5CF6" filter="url(#nodeGlow)" />
         </svg>
 
         <div className="paths-grid">

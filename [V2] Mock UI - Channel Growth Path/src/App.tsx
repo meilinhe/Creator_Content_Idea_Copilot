@@ -38,10 +38,12 @@ const paths: GrowthPath[] = [
 const App = () => {
   return (
     <div className="app-shell">
-      <main className="page">
-        <Header />
-        <GrowthPathMap paths={paths} />
-        <NextStepCTA />
+      <main className="dashboard-frame">
+        <div className="page">
+          <Header />
+          <GrowthPathMap paths={paths} />
+          <NextStepCTA />
+        </div>
       </main>
     </div>
   );
