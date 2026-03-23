@@ -370,6 +370,7 @@ button {
   font-size: 0.88rem;
   font-weight: 600;
   margin: 0;
+  margin-top: -2px;
   line-height: 1.1;
 }
 
@@ -402,6 +403,12 @@ button {
   font-size: 0.79rem;
 }
 
+.topic-row-break {
+  flex-basis: 100%;
+  width: 0;
+  height: 0;
+}
+
 .primary-btn,
 .secondary-btn {
   border-radius: 12px;
@@ -415,6 +422,8 @@ button {
   background: linear-gradient(135deg, #4f7df3, #8a5cf6);
   color: #fff;
   box-shadow: 0 6px 14px rgba(79, 125, 243, 0.28);
+  width: 100%;
+  align-self: stretch;
 }
 
 .primary-btn.alt-gradient {
