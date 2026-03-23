@@ -1,15 +1,20 @@
+import { Sparkles } from 'lucide-react';
+
 const Header = () => {
   return (
     <header className="header-block">
       <h1>
-        Growth Paths. <span>Suggested by AI.</span>
+        Growth Paths. <span>Expowered by AI.</span>
       </h1>
       <section className="header-card section-card">
         <p>
-          AI analyzed your channel performance and market trends to identify the clearest ways your
+          We analyzed your channel performance and market trends to identify the clearest ways your
           channel can grow next.
         </p>
-        <span className="ai-badge">AI-POWERED ANALYSIS</span>
+        <div className="ai-badge">
+          <Sparkles className="h-3.5 w-3.5" />
+          AI-POWERED ANALYSIS
+        </div>
       </section>
     </header>
   );

@@ -44,12 +44,11 @@ const GrowthPathMap = ({ paths }: GrowthPathMapProps) => {
 
   return (
     <section className="analysis-module section-card">
-      <h2>Choose Your Growth Path</h2>
-      <p className="analysis-subtitle">This channel → these 3 growth directions</p>
+      <h2>Select Your Growth Path</h2>
 
       <div className="pillar-zone">
-        <div className="eyebrow">Your Channel</div>
-        <h3>Active Content Pillars</h3>
+        <div className="eyebrow">Your Content Pillars</div> 
+        
 
         <div className="pillar-carousel">
           <button type="button" aria-label="Previous pillar" className="arrow-btn" onClick={prev}>
@@ -57,8 +56,9 @@ const GrowthPathMap = ({ paths }: GrowthPathMapProps) => {
           </button>
           <article className="pillar-card">
             <h4>{pillars[activeIndex].title}</h4>
-            <p>
-              <span>Core Audience:</span> {pillars[activeIndex].audience}
+            <p className="pillar-audience-row">
+              <span className="audience-label">Core Audience</span>
+              <span className="audience-pill">{pillars[activeIndex].audience}</span>
             </p>
           </article>
           <button type="button" aria-label="Next pillar" className="arrow-btn" onClick={next}>
@@ -80,37 +80,60 @@ const GrowthPathMap = ({ paths }: GrowthPathMapProps) => {
       </div>
 
       <div className="path-tree">
-        <svg className="connectors" viewBox="0 0 1000 170" preserveAspectRatio="none" aria-hidden>
+        <svg className="connectors" viewBox="0 0 1000 110" preserveAspectRatio="none" aria-hidden>
+
           <defs>
-            <linearGradient id="leftBranch" x1="500" y1="10" x2="167" y2="126" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stopColor="#4F7DF3" />
-              <stop offset="100%" stopColor="#6E8FF5" />
+            <linearGradient id="leftBranch" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#4F7DF3" stopOpacity="0.45" />
+              <stop offset="100%" stopColor="#6E8FF5" stopOpacity="0.45" />
             </linearGradient>
-            <linearGradient id="centerBranch" x1="500" y1="10" x2="500" y2="126" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stopColor="#4F7DF3" />
-              <stop offset="100%" stopColor="#4F7DF3" />
+
+            <linearGradient id="centerBranch" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#4F7DF3" stopOpacity="0.45" />
+              <stop offset="100%" stopColor="#4F7DF3" stopOpacity="0.45" />
             </linearGradient>
-            <linearGradient id="rightBranch" x1="500" y1="10" x2="833" y2="126" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stopColor="#6E8FF5" />
-              <stop offset="100%" stopColor="#8A5CF6" />
+
+            <linearGradient id="rightBranch" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#6E8FF5" stopOpacity="0.45" />
+              <stop offset="100%" stopColor="#8A5CF6" stopOpacity="0.45" />
             </linearGradient>
-            <filter id="nodeGlow" x="-50%" y="-50%" width="200%" height="200%">
-              <feGaussianBlur stdDeviation="3" result="blur" />
+
+            <filter id="nodeGlow">
+              <feGaussianBlur stdDeviation="2" result="coloredBlur" />
               <feMerge>
-                <feMergeNode in="blur" />
+                <feMergeNode in="coloredBlur" />
                 <feMergeNode in="SourceGraphic" />
               </feMerge>
             </filter>
+
           </defs>
 
-          <path d="M500 8 C400 24 300 78 167 126" className="line" stroke="url(#leftBranch)" />
-          <path d="M500 8 C500 28 500 82 500 126" className="line" stroke="url(#centerBranch)" />
-          <path d="M500 8 C600 24 700 78 833 126" className="line" stroke="url(#rightBranch)" />
+          {/* left branch */}
+          <path
+            d="M500 5 L240 46"
+            className="line"
+            stroke="url(#leftBranch)"
+          />
 
-          <circle cx="500" cy="8" r="6" fill="#4F7DF3" filter="url(#nodeGlow)" />
-          <circle cx="167" cy="126" r="5" fill="#6E8FF5" filter="url(#nodeGlow)" />
-          <circle cx="500" cy="126" r="5" fill="#4F7DF3" filter="url(#nodeGlow)" />
-          <circle cx="833" cy="126" r="5" fill="#8A5CF6" filter="url(#nodeGlow)" />
+          {/* center branch */}
+          <path
+            d="M500 5 L500 46"
+            className="line"
+            stroke="url(#centerBranch)"
+          />
+
+          {/* right branch */}
+          <path
+            d="M500 5 L760 46"
+            className="line"
+            stroke="url(#rightBranch)"
+          />
+
+          {/* endpoints */}
+          <circle cx="240" cy="46" r="6" fill="#6E8FF5" filter="url(#nodeGlow)" />
+          <circle cx="500" cy="46" r="6" fill="#4F7DF3" filter="url(#nodeGlow)" />
+          <circle cx="760" cy="46" r="6" fill="#8A5CF6" filter="url(#nodeGlow)" />
+
         </svg>
 
         <div className="paths-grid">

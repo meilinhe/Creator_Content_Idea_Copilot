@@ -49,7 +49,7 @@ button {
 
 .page {
   display: grid;
-  gap: 14px;
+  gap: 10px;
 }
 
 .section-card {
@@ -94,13 +94,22 @@ button {
 
 .ai-badge {
   flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   border-radius: 999px;
-  padding: 7px 12px;
-  background: linear-gradient(135deg, #4f7df3, #8a5cf6);
-  color: #fff;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
+  background: linear-gradient(to right, #4f7df7, #8b5cf6);
+  padding: 6px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: white;
+}
+
+.ai-badge svg {
+  width: 14px;
+  height: 14px;
 }
 
 .analysis-module {
@@ -121,6 +130,9 @@ button {
 }
 
 .pillar-zone {
+  position: relative;
+  z-index: 1;
+  overflow: visible;
   margin: 10px auto 0;
   max-width: 720px;
   text-align: center;
@@ -181,15 +193,35 @@ button {
 }
 
 .pillar-card p {
-  margin-top: 6px;
-  color: #334155;
+  margin-top: 8px;
   font-size: 0.92rem;
 }
 
-.pillar-card span {
+.pillar-audience-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.audience-label {
   color: #4f7df3;
   font-weight: 600;
 }
+
+.audience-pill {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 4px 10px;
+  background: #eef3ff;
+  border: 1px solid #d9e5ff;
+  color: #334155;
+  font-weight: 500;
+  font-size: 0.82rem;
+}
+
 
 .dots {
   margin-top: 9px;
@@ -214,16 +246,19 @@ button {
 
 .path-tree {
   position: relative;
-  margin-top: 10px;
-  padding-top: 60px;
+  z-index: 3;
+  margin-top: -18px;
+  padding-top: 72px;
 }
 
 .connectors {
   position: absolute;
-  top: 0;
   left: 0;
+  top: 0;
   width: 100%;
-  height: 152px;
+  height: 160px;
+  z-index: 20;
+  pointer-events: none;
 }
 
 .line {
@@ -234,6 +269,8 @@ button {
 }
 
 .paths-grid {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
@@ -248,7 +285,11 @@ button {
   padding: 12px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
+}
+
+.map {
+  position: relative;
 }
 
 .chip {
@@ -287,15 +328,16 @@ button {
 
 .path-head {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: flex-start;
-  gap: 8px;
+  margin-bottom: 2px;
 }
 
 .path-head h4 {
   font-size: 0.98rem;
   color: #0f172a;
-  margin-top: 4px;
+  margin: 0;
+  line-height: 1.15;
 }
 
 .score-ring {
@@ -327,6 +369,8 @@ button {
   color: #4f7df3;
   font-size: 0.88rem;
   font-weight: 600;
+  margin: 0;
+  line-height: 1.1;
 }
 
 .topics-subcard {
@@ -432,8 +476,9 @@ button {
     display: none;
   }
 
-  .pillar-card {
-    min-width: min(88vw, 540px);
+  .pillar-card p {
+    margin-top: 8px;
+    font-size: 0.92rem;
   }
 
   .cta-row {
