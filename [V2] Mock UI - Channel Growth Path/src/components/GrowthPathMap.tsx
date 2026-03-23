@@ -30,6 +30,7 @@ type ConnectorLayout = {
   width: number;
   height: number;
   start: Point;
+  junction: Point;
   ends: Point[];
 };
 
@@ -52,6 +53,7 @@ const fallbackLayout: ConnectorLayout = {
   width: 1000,
   height: 110,
   start: { x: 500, y: 5 },
+  junction: { x: 500, y: 27 },
   ends: [
     { x: 240, y: 46 },
     { x: 500, y: 46 },
@@ -97,12 +99,18 @@ const GrowthPathMap = ({ paths }: GrowthPathMapProps) => {
         y: rect!.top - treeRect.top,
       }));
 
+      const junctionPoint = {
+        x: startPoint.x,
+        y: startPoint.y + 22,
+      };
+
       const maxY = Math.max(startPoint.y, ...endPoints.map((point) => point.y));
 
       setConnectorLayout({
         width: treeRect.width,
         height: Math.max(1, maxY + 10),
         start: startPoint,
+        junction: junctionPoint,
         ends: endPoints,
       });
     };
@@ -179,11 +187,6 @@ const GrowthPathMap = ({ paths }: GrowthPathMapProps) => {
               <stop offset="100%" stopColor="#6E8FF5" stopOpacity="0.45" />
             </linearGradient>
 
-            <linearGradient id="centerBranch" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#4F7DF3" stopOpacity="0.45" />
-              <stop offset="100%" stopColor="#4F7DF3" stopOpacity="0.45" />
-            </linearGradient>
-
             <linearGradient id="rightBranch" x1="0%" y1="0%" x2="100%" y2="0%">
               <stop offset="0%" stopColor="#6E8FF5" stopOpacity="0.45" />
               <stop offset="100%" stopColor="#8A5CF6" stopOpacity="0.45" />
@@ -203,7 +206,7 @@ const GrowthPathMap = ({ paths }: GrowthPathMapProps) => {
               key={`branch-line-${paths[index]?.name ?? index}`}
               d={`M${connectorLayout.start.x} ${connectorLayout.start.y} L${point.x} ${point.y}`}
               className="line"
-              stroke={index === 0 ? 'url(#leftBranch)' : index === 1 ? 'url(#centerBranch)' : 'url(#rightBranch)'}
+              stroke={index === 0 ? 'url(#leftBranch)' : index === 1 ? 'rgba(79,125,243,0.45)' : 'url(#rightBranch)'}
             />
           ))}
 
@@ -236,7 +239,13 @@ const GrowthPathMap = ({ paths }: GrowthPathMapProps) => {
               </span>
 
               <div className="path-head">
-                <h4>{path.name}</h4>
+                <div className="path-title-block">
+                  <h4>{path.name}</h4>
+                  <p className="potential" style={{ color: path.ringColor }}>
+                    {path.potential}
+                  </p>
+                </div>
+
                 <div
                   className="score-ring"
                   style={
@@ -249,10 +258,6 @@ const GrowthPathMap = ({ paths }: GrowthPathMapProps) => {
                   <span>{path.score}</span>
                 </div>
               </div>
-
-              <p className="potential" style={{ color: path.ringColor }}>
-                {path.potential}
-              </p>
 
               <div className="topics-subcard">
                 <p className="topics-label">Suggested Topics</p>

@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <header className="header-block">
       <h1>
-        Growth Paths. <span>Expowered by AI.</span>
+        Growth Paths. <span>Empowered by AI.</span>
       </h1>
       <section className="header-card section-card">
         <p>

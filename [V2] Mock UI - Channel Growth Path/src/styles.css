@@ -122,13 +122,6 @@ button {
   color: #0f172a;
 }
 
-.analysis-subtitle {
-  margin-top: 2px;
-  text-align: center;
-  color: #64748b;
-  font-size: 0.88rem;
-}
-
 .pillar-zone {
   position: relative;
   z-index: 1;
@@ -288,10 +281,6 @@ button {
   gap: 6px;
 }
 
-.map {
-  position: relative;
-}
-
 .chip {
   display: inline-flex;
   align-items: center;
@@ -328,9 +317,17 @@ button {
 
 .path-head {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
+  gap: 12px;
   margin-bottom: 2px;
+}
+
+.path-title-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-width: 0;
 }
 
 .path-head h4 {
@@ -338,6 +335,13 @@ button {
   color: #0f172a;
   margin: 0;
   line-height: 1.15;
+}
+
+.potential {
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin: 8px 0 0 0;
+  line-height: 1.1;
 }
 
 .score-ring {
@@ -365,15 +369,6 @@ button {
   border: 1px solid #eef2fa;
 }
 
-.potential {
-  color: #4f7df3;
-  font-size: 0.88rem;
-  font-weight: 600;
-  margin: 0;
-  margin-top: -5px;
-  line-height: 1.1;
-}
-
 .topics-subcard {
   border: 1px solid #e3e8f3;
   border-radius: 12px;
@@ -392,6 +387,15 @@ button {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+}
+
+.paths-grid .path-card:first-child .topic-bubbles {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.paths-grid .path-card:first-child .topic-bubble {
+  width: fit-content;
 }
 
 .topic-bubble {
@@ -457,11 +461,13 @@ button {
 .cta-actions {
   display: flex;
   gap: 10px;
+  width: 520px;
 }
 
 .cta-actions .primary-btn {
+  flex: 1;
+  min-width: 0;
   white-space: nowrap;
-  width: auto;
   align-self: auto;
 }
 
@@ -481,7 +487,10 @@ button {
   }
 
   .path-tree {
-    padding-top: 12px;
+    position: relative;
+    z-index: 3;
+    margin-top: 8px;
+    padding-top: 46px;
   }
 
   .connectors {
@@ -499,7 +508,18 @@ button {
   }
 
   .cta-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    width: 420px;
+  }
+
+  .cta-actions .primary-btn {
     width: 100%;
-    flex-wrap: wrap;
+    min-width: 0;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
