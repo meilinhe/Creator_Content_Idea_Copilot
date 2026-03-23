@@ -1,0 +1,68 @@
+.card-base {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--card-radius);
+  box-shadow: var(--shadow-card);
+}
+
+.card-pad {
+  padding: var(--space-card);
+}
+
+.eyebrow {
+  font-size: var(--text-eyebrow);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid #d9dfec;
+  text-decoration: none;
+  color: #334155;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: #f8fafc;
+}
+
+.chip-active {
+  color: #ffffff;
+  border-color: transparent;
+  background: linear-gradient(135deg, #4f7df3, #8a5cf6);
+}
+
+.ai-badge {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 999px;
+  background: linear-gradient(to right, #4f7df7, #8b5cf6);
+  padding: 6px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: white;
+}
+
+.primary-btn {
+  border-radius: 12px;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(135deg, #4f7df3, #8a5cf6);
+  color: #fff;
+  box-shadow: 0 6px 14px rgba(79, 125, 243, 0.28);
+}
+
+.primary-btn.alt-gradient {
+  background: linear-gradient(135deg, #5d8af5, #8a5cf6);
+}

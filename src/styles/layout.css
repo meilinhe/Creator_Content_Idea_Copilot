@@ -1,0 +1,42 @@
+.app-canvas {
+  min-height: 100vh;
+  padding: var(--space-page);
+  display: grid;
+  gap: 12px;
+  justify-items: center;
+}
+
+.route-tabs {
+  width: min(var(--page-max-width), 100%);
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.page-shell {
+  width: min(var(--page-max-width), 100%);
+}
+
+.page-frame {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--page-frame-radius);
+  background: var(--color-frame);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-frame);
+  padding: var(--space-frame);
+  overflow: auto;
+}
+
+.mock-page-body {
+  position: relative;
+  display: grid;
+  gap: var(--space-section);
+}
+
+@media (max-width: 1060px) {
+  .page-frame {
+    aspect-ratio: auto;
+    min-height: calc(100vh - 120px);
+  }
+}
