@@ -1,5 +1,5 @@
 import type { CSSProperties } from 'react';
-import { Fragment, useLayoutEffect, useRef, useState } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
 
 export type GrowthPath = {
   name: string;
@@ -64,7 +64,7 @@ const GrowthPathMap = ({ paths }: GrowthPathMapProps) => {
   const [connectorLayout, setConnectorLayout] = useState<ConnectorLayout>(fallbackLayout);
 
   const treeRef = useRef<HTMLDivElement>(null);
-  const pillarCardRef = useRef<HTMLElement>(null);
+  const pillarZoneRef = useRef<HTMLDivElement>(null);
   const pathCardRefs = useRef<Array<HTMLElement | null>>([]);
 
   const prev = () => setActiveIndex((current) => (current - 1 + pillars.length) % pillars.length);
@@ -72,7 +72,7 @@ const GrowthPathMap = ({ paths }: GrowthPathMapProps) => {
 
   useLayoutEffect(() => {
     const treeElement = treeRef.current;
-    const pillarElement = pillarCardRef.current;
+    const pillarElement = pillarZoneRef.current;
 
     if (!treeElement || !pillarElement || paths.length === 0) {
       return;
@@ -133,14 +133,14 @@ const GrowthPathMap = ({ paths }: GrowthPathMapProps) => {
     <section className="analysis-module section-card">
       <h2>Select Your Growth Path</h2>
 
-      <div className="pillar-zone">
+      <div ref={pillarZoneRef} className="pillar-zone">
         <div className="eyebrow">Your Content Pillars</div>
 
         <div className="pillar-carousel">
           <button type="button" aria-label="Previous pillar" className="arrow-btn" onClick={prev}>
             ←
           </button>
-          <article ref={pillarCardRef} className="pillar-card">
+          <article className="pillar-card">
             <h4>{pillars[activeIndex].title}</h4>
             <p className="pillar-audience-row">
               <span className="audience-label">Core Audience</span>
@@ -257,16 +257,15 @@ const GrowthPathMap = ({ paths }: GrowthPathMapProps) => {
               <div className="topics-subcard">
                 <p className="topics-label">Suggested Topics</p>
                 <div className="topic-bubbles">
-                  {path.topics.map((topic, topicIndex) => (
-                    <Fragment key={topic}>
-                      {path.name === 'Double Down' && topicIndex === 2 ? <span className="topic-row-break" aria-hidden /> : null}
-                      <span className="topic-bubble">{topic}</span>
-                    </Fragment>
+                  {path.topics.map((topic) => (
+                    <span key={topic} className="topic-bubble">
+                      {topic}
+                    </span>
                   ))}
                 </div>
               </div>
 
-              <button type="button" className="primary-btn">
+              <button type="button" className="primary-btn path-focus-btn">
                 Focus on this path
               </button>
 
