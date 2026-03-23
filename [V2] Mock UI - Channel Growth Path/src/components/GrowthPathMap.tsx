@@ -1,3 +1,4 @@
+import type { CSSProperties } from 'react';
 import { useState } from 'react';
 
 export type GrowthPath = {
@@ -5,6 +6,8 @@ export type GrowthPath = {
   score: number;
   potential: string;
   signal: string;
+  signalTone: 'blue' | 'green' | 'purple';
+  ringColor: string;
   topics: string[];
   explanation: string;
 };
@@ -78,19 +81,60 @@ const GrowthPathMap = ({ paths }: GrowthPathMapProps) => {
 
       <div className="path-tree">
         <svg className="connectors" viewBox="0 0 1000 210" preserveAspectRatio="none" aria-hidden>
-          <path d="M500 10 C390 45 300 95 180 170" className="line line-left" />
-          <path d="M500 10 C500 45 500 95 500 170" className="line line-center" />
-          <path d="M500 10 C610 45 700 95 820 170" className="line line-right" />
+          <defs>
+            <linearGradient id="leftBranch" x1="500" y1="10" x2="180" y2="170" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stopColor="#4F7DF3" />
+              <stop offset="100%" stopColor="#6E8FF5" />
+            </linearGradient>
+            <linearGradient id="centerBranch" x1="500" y1="10" x2="500" y2="170" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stopColor="#4F7DF3" />
+              <stop offset="100%" stopColor="#4F7DF3" />
+            </linearGradient>
+            <linearGradient id="rightBranch" x1="500" y1="10" x2="820" y2="170" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stopColor="#6E8FF5" />
+              <stop offset="100%" stopColor="#8A5CF6" />
+            </linearGradient>
+            <filter id="nodeGlow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="3" result="blur" />
+              <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+          </defs>
+
+          <path d="M500 10 C390 38 300 92 180 170" className="line" stroke="url(#leftBranch)" />
+          <path d="M500 10 C500 35 500 92 500 170" className="line" stroke="url(#centerBranch)" />
+          <path d="M500 10 C610 38 700 92 820 170" className="line" stroke="url(#rightBranch)" />
+
+          <circle cx="180" cy="170" r="5" fill="#6E8FF5" filter="url(#nodeGlow)" />
+          <circle cx="500" cy="170" r="5" fill="#4F7DF3" filter="url(#nodeGlow)" />
+          <circle cx="820" cy="170" r="5" fill="#8A5CF6" filter="url(#nodeGlow)" />
         </svg>
 
         <div className="paths-grid">
           {paths.map((path) => (
             <article key={path.name} className="path-card">
-              <span className="chip">{path.signal}</span>
+              <span className={`chip chip-${path.signalTone}`}>
+                <span className="chip-icon" aria-hidden>
+                  ✦
+                </span>
+                {path.signal}
+              </span>
 
               <div className="path-head">
                 <h4>{path.name}</h4>
-                <span className="score">{path.score}</span>
+                <div
+                  className="score-ring"
+                  style={
+                    {
+                      '--score': `${path.score}%`,
+                      '--ring-color': path.ringColor,
+                    } as CSSProperties
+                  }
+                >
+                  <span>{path.score}</span>
+                </div>
               </div>
 
               <p className="potential">{path.potential}</p>
