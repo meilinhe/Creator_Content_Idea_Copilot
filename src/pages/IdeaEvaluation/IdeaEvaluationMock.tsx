@@ -1,25 +1,24 @@
-import { 
-  Sparkles, 
-  ArrowDown, 
-  TrendingUp, 
-  Users, 
-  AlertCircle, 
+import {
+  Sparkles,
+  TrendingUp,
+  Users,
+  AlertCircle,
   Clock,
   Zap,
   ArrowUpRight,
   Play,
   BarChart3,
-  CheckSquare
+  CheckSquare,
 } from 'lucide-react';
 
 export function IdeaEvaluationMock() {
   return (
-<div className="w-full max-w-6xl mx-auto p-8">
+<div className="w-full max-w-[1380px] mx-auto p-3">
   <div className="relative w-full">
-    <div className="bg-white rounded-2xl shadow-2xl p-6">
+    <div className="bg-white rounded-2xl shadow-2xl p-8">
 
           {/* Header Labels */}
-          <h1 className="text-[48px] font-bold leading-[1.02] tracking-tight text-slate-800">
+          <h1 className="text-[54px] font-bold leading-[1.02] tracking-tight text-slate-800">
             Your Video Idea.
             <span className="ml-3 bg-gradient-to-r from-[#4F7DF7] via-[#7C6BFF] to-[#A855F7] bg-clip-text text-transparent">
               Evaludated by AI.
@@ -27,7 +26,7 @@ export function IdeaEvaluationMock() {
           </h1>
 
           {/* Section 1: Idea Input */}
-          <div className="bg-white rounded-xl border-2 border-gray-100 p-3 mb-3 shadow-sm">
+          <div className="bg-white rounded-xl border-2 border-gray-100 p-4 mb-3 shadow-sm">
             <div className="flex items-center gap-4">
               <div className="text-[10px] tracking-widest text-gray-500 uppercase flex-shrink-0">
                 Video Idea
@@ -54,7 +53,7 @@ export function IdeaEvaluationMock() {
           </div>
 
           {/* Section 3: AI Evaluation Metrics */}
-          <div className="grid grid-cols-5 gap-2 mb-3">
+          <div className="grid grid-cols-5 gap-3 mb-3">
             {/* Metric 1: Audience Fit */}
             <div className="bg-white rounded-lg border border-gray-200 p-3 shadow-sm">
               <div className="flex items-center gap-1.5 mb-2">
@@ -168,7 +167,7 @@ export function IdeaEvaluationMock() {
 
           {/* Section 4: Recommendation (Hero Element) */}
           <div 
-            className="rounded-xl p-5 relative overflow-hidden"
+            className="rounded-xl p-6 relative overflow-hidden"
             style={{
               background: 'linear-gradient(135deg, #4F7FFF 0%, #7B5FFF 50%, #9D5FFF 100%)'
             }}
@@ -251,7 +250,7 @@ export function IdeaEvaluationMock() {
 
           {/* Section 2: Action Hub (Most Prominent) */}
           <div 
-            className="rounded-xl p-5 mt-3 relative overflow-hidden shadow-lg"
+            className="rounded-xl p-6 mt-3 relative overflow-hidden shadow-lg"
             style={{
               background: 'white',
               border: '2px solid transparent',

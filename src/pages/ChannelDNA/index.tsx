@@ -6,7 +6,6 @@ import {
   CircleUserRound,
   Compass,
   Sparkles,
-  TrendingUp,
   Youtube,
 } from 'lucide-react';
 
@@ -87,17 +86,17 @@ function TopicBubble({
 export default function ChannelDNAPage() {
   return (
     <div className="mock-page-body text-slate-700">
-      <main className="mx-auto flex aspect-[4/3] w-full max-w-[1440px] flex-col gap-2 rounded-[28px] border border-slate-200 bg-[#F7F8FB] p-6 shadow-[0_24px_60px_rgba(15,23,42,0.08)]">
-        <h1 className="text-[48px] font-bold leading-[1.0] tracking-tight text-slate-800">
+      <main className="flex h-full w-full flex-col gap-2 rounded-[24px] border border-slate-200 bg-[#F7F8FB] p-5 shadow-[0_18px_48px_rgba(15,23,42,0.08)]">
+        <h1 className="text-[50px] font-bold leading-[1.0] tracking-tight text-slate-800">
           Your Channel’s DNA.
           <span className="ml-3 bg-gradient-to-r from-[#4F7DF7] via-[#7C6BFF] to-[#A855F7] bg-clip-text text-transparent">
             Decoded by AI.
           </span>
         </h1>
 
-        <header className="rounded-3xl border border-slate-200 bg-white px-6 py-4 shadow-sm">
+        <header className="rounded-3xl border border-slate-200 bg-white px-5 py-3.5 shadow-sm">
           <div className="flex items-center justify-between gap-4">
-            <p className="max-w-5xl text-[17px] leading-relaxed text-slate-600">
+            <p className="max-w-5xl text-[16px] leading-relaxed text-slate-600">
               We analyzed your channel’s content and market trends to reveal what’s working,
               what’s missing, and your smartest next move.
             </p>
@@ -109,7 +108,7 @@ export default function ChannelDNAPage() {
           </div>
         </header>
 
-        <section className="grid grid-cols-[1.6fr_1fr] gap-4 rounded-3xl border border-slate-200 bg-white p-4 shadow-sm">
+        <section className="grid grid-cols-[1.58fr_1fr] gap-3 rounded-3xl border border-slate-200 bg-white p-3.5 shadow-sm">
           <div className="flex gap-4">
             <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#4F7DF7]/20 to-[#8B5CF6]/20 ring-1 ring-[#4F7DF7]/15">
               <CircleUserRound className="h-7 w-7 text-[#4F7DF7]" />
@@ -117,7 +116,7 @@ export default function ChannelDNAPage() {
 
             <div className="space-y-1">
               <p className="text-[22px] font-bold leading-none text-slate-800">Alex Tech Reviews</p>
-              <p className="text-[14px] text-slate-500">@AlexTechReviews · 127K subscribers</p>
+              <p className="text-[15px] text-slate-500">@AlexTechReviews · 127K subscribers</p>
 
               <div className="space-y-3 flex flex-wrap items-center gap-x-4 gap-y-2 pt-0.5 text-[14px] font-medium text-slate-600">
                 <div className="inline-flex items-center gap-2">
@@ -156,22 +155,22 @@ export default function ChannelDNAPage() {
             </div>
           </div>
 
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-3 gap-3">
             {scoreRings.map((item) => (
               <ScoreRing key={item.label} {...item} />
             ))}
           </div>
         </section>
 
-        <section className="grid flex-1 grid-cols-[1.5fr_0.95fr] gap-4">
-          <div className="flex flex-col gap-3">
-            <div className="rounded-3xl border border-slate-200 bg-white p-4 shadow-sm">
-              <h2 className="text-[24px] font-semibold text-slate-800">Channel DNA Map</h2>
-              <p className="text-[15px] text-slate-500">
+        <section className="grid flex-1 grid-cols-[1.48fr_0.95fr] gap-3">
+          <div className="flex flex-col gap-2.5">
+            <div className="rounded-3xl border border-slate-200 bg-white p-3 shadow-sm">
+              <h2 className="text-[25px] font-semibold text-slate-800">Channel DNA Map</h2>
+              <p className="text-[16px] text-slate-500">
                 We mapped your topics by audience interest vs. channel coverage.
               </p>
 
-              <div className="relative mt-3 h-[335px] rounded-2xl border border-slate-200 bg-slate-50">
+              <div className="relative mt-2.5 h-[292px] rounded-2xl border border-slate-200 bg-slate-50">
                 <div className="absolute left-[84px] top-4 bottom-10 right-4 rounded-xl border border-slate-200" />
                 <div className="absolute left-[84px] right-4 top-[calc(50%-3px)] h-px bg-slate-200" />
                 <div className="absolute left-[calc(50%+40px)] top-4 bottom-10 w-px bg-slate-200" />
@@ -239,13 +238,13 @@ export default function ChannelDNAPage() {
               </div>
             </div>
 
-            <section className="rounded-3xl border border-slate-200 bg-white p-3.5 shadow-sm">
-              <h3 className="text-[21px] font-semibold text-slate-800">Opportunity Signals</h3>
+            <section className="rounded-3xl border border-slate-200 bg-white p-3 shadow-sm">
+              <h3 className="text-[22px] font-semibold text-slate-800">Opportunity Signals</h3>
               <p className="text-[14px] text-slate-500">
                 Market data that reveals what’s trending and what your audience wants next.
               </p>
 
-              <div className="mt-3 grid grid-cols-3 gap-2.5">
+              <div className="mt-2.5 grid grid-cols-3 gap-2">
                 <article className="rounded-2xl border border-slate-200 bg-slate-50 p-3">
                   <p className="text-[15px] font-semibold text-[#8B5CF6]">Market Trend</p>
                   <p className="mt-1.5 text-[14px] text-slate-700">“Budget laptops”</p>
@@ -310,11 +309,11 @@ export default function ChannelDNAPage() {
             </section>
           </div>
 
-          <aside className="flex h-full flex-col rounded-3xl border border-[#C7D2FE] bg-gradient-to-b from-[#EEF2FF] to-white p-5 shadow-sm">
-            <h3 className="text-[26px] font-semibold leading-tight text-slate-800">Recommended Next Move</h3>
+          <aside className="flex h-full flex-col rounded-3xl border border-[#C7D2FE] bg-gradient-to-b from-[#EEF2FF] to-white p-[18px] shadow-sm">
+            <h3 className="text-[27px] font-semibold leading-tight text-slate-800">Recommended Next Move</h3>
 
             <p className="mt-3 text-[12px] font-semibold uppercase tracking-[0.12em] text-slate-500">TOPIC</p>
-            <p className="mt-1 text-[32px] font-bold leading-[1.08] text-slate-800">Budget Laptop Comparisons</p>
+            <p className="mt-1 text-[33px] font-bold leading-[1.08] text-slate-800">Budget Laptop Comparisons</p>
 
             <div className="mt-3 inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-[13px] font-semibold text-emerald-700">
               Safe Expansion
@@ -366,11 +365,6 @@ export default function ChannelDNAPage() {
         </section>
       </main>
 
-      <div className="pointer-events-none absolute right-6 top-5 text-[12px] uppercase tracking-[0.12em] text-slate-500">
-        <span className="inline-flex items-center gap-1 rounded-full border border-slate-200 bg-white px-3 py-1 shadow-sm">
-          <TrendingUp className="h-3.5 w-3.5 text-[#4F7DF7]" /> AI Confidence: High
-        </span>
-      </div>
     </div>
   );
 }
