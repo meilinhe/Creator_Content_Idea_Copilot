@@ -177,9 +177,9 @@ export default function GrowthPathPage() {
     <div className="mock-page-body text-slate-700">
       <div className="flex h-full w-full flex-col gap-2">
         <h1 className="text-[52px] font-bold leading-[1.0] tracking-tight text-slate-800">
-          Growth Paths.
+          Your Growth Paths.
           <span className="ml-3 bg-gradient-to-r from-[#4F7DF7] via-[#7C6BFF] to-[#A855F7] bg-clip-text text-transparent">
-            Empowered by AI.
+            Unlocked.
           </span>
         </h1>
 

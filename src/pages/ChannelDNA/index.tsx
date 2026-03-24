@@ -90,7 +90,7 @@ export default function ChannelDNAPage() {
         <h1 className="text-[52px] font-bold leading-[1.0] tracking-tight text-slate-800">
           Your Channel’s DNA.
           <span className="ml-3 bg-gradient-to-r from-[#4F7DF7] via-[#7C6BFF] to-[#A855F7] bg-clip-text text-transparent">
-            Decoded by AI.
+            Decoded.
           </span>
         </h1>
 

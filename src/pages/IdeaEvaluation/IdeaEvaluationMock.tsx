@@ -19,7 +19,7 @@ export function IdeaEvaluationMock() {
           <h1 className="text-[52px] font-bold leading-[1.02] tracking-tight text-slate-800">
             Your Video Idea.
             <span className="ml-3 bg-gradient-to-r from-[#4F7DF7] via-[#7C6BFF] to-[#A855F7] bg-clip-text text-transparent">
-              Evaludated by AI.
+              Evaluated.
             </span>
           </h1>
 
