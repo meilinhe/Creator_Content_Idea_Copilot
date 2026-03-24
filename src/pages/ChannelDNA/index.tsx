@@ -86,8 +86,8 @@ function TopicBubble({
 export default function ChannelDNAPage() {
   return (
     <div className="mock-page-body text-slate-700">
-      <main className="flex h-full w-full flex-col gap-2 rounded-[24px] border border-slate-200 bg-[#F7F8FB] p-5 shadow-[0_18px_48px_rgba(15,23,42,0.08)]">
-        <h1 className="text-[50px] font-bold leading-[1.0] tracking-tight text-slate-800">
+      <div className="flex h-full w-full flex-col gap-2">
+        <h1 className="text-[52px] font-bold leading-[1.0] tracking-tight text-slate-800">
           Your Channel’s DNA.
           <span className="ml-3 bg-gradient-to-r from-[#4F7DF7] via-[#7C6BFF] to-[#A855F7] bg-clip-text text-transparent">
             Decoded by AI.
@@ -240,7 +240,7 @@ export default function ChannelDNAPage() {
 
             <section className="rounded-3xl border border-slate-200 bg-white p-3 shadow-sm">
               <h3 className="text-[22px] font-semibold text-slate-800">Opportunity Signals</h3>
-              <p className="text-[14px] text-slate-500">
+              <p className="text-[15px] text-slate-500">
                 Market data that reveals what’s trending and what your audience wants next.
               </p>
 
@@ -363,8 +363,7 @@ export default function ChannelDNAPage() {
             </div>
           </aside>
         </section>
-      </main>
-
+      </div>
     </div>
   );
 }

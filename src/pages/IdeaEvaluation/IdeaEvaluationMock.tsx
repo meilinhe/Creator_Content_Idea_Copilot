@@ -13,12 +13,10 @@ import {
 
 export function IdeaEvaluationMock() {
   return (
-<div className="w-full max-w-[1380px] mx-auto p-3">
-  <div className="relative w-full">
-    <div className="bg-white rounded-2xl shadow-2xl p-8">
+<div className="w-full h-full flex flex-col gap-3">
 
           {/* Header Labels */}
-          <h1 className="text-[54px] font-bold leading-[1.02] tracking-tight text-slate-800">
+          <h1 className="text-[52px] font-bold leading-[1.02] tracking-tight text-slate-800">
             Your Video Idea.
             <span className="ml-3 bg-gradient-to-r from-[#4F7DF7] via-[#7C6BFF] to-[#A855F7] bg-clip-text text-transparent">
               Evaludated by AI.
@@ -43,11 +41,6 @@ export function IdeaEvaluationMock() {
               >
                 <Sparkles className="w-3 h-3" />
                 <span>AI-POWERED ANALYSIS</span>
-                <div className="flex gap-0.5 ml-1">
-                  <div className="w-1 h-1 rounded-full bg-white/60 animate-pulse"></div>
-                  <div className="w-1 h-1 rounded-full bg-white/60 animate-pulse" style={{ animationDelay: '0.2s' }}></div>
-                  <div className="w-1 h-1 rounded-full bg-white/60 animate-pulse" style={{ animationDelay: '0.4s' }}></div>
-                </div>
               </div>
             </div>
           </div>
@@ -58,20 +51,20 @@ export function IdeaEvaluationMock() {
             <div className="bg-white rounded-lg border border-gray-200 p-3 shadow-sm">
               <div className="flex items-center gap-1.5 mb-2">
                 <Users className="w-3.5 h-3.5 text-gray-400" />
-                <div className="text-[10px] text-gray-600 uppercase tracking-wide">Audience Fit</div>
+                <div className="text-[12px] text-gray-600 uppercase tracking-wide">Audience Fit</div>
               </div>
               <div className="text-3xl mb-1" style={{ color: '#4F7FFF' }}>82</div>
-              <div className="text-[9px] text-gray-400 mb-2">/100</div>
+              <div className="text-[11px] text-gray-400 mb-2">/100</div>
               <div className="w-full h-1.5 bg-gray-100 rounded-full overflow-hidden mb-2">
                 <div 
                   className="h-full rounded-full" 
                   style={{ width: '82%', background: '#4F7FFF' }}
                 ></div>
               </div>
-              <div className="text-[9px] px-1.5 py-0.5 rounded bg-blue-50 inline-block mb-1" style={{ color: '#4F7FFF' }}>
+              <div className="text-[11px] px-2 py-0.5 rounded bg-blue-50 inline-block mb-1" style={{ color: '#4F7FFF' }}>
                 Strong
               </div>
-              <div className="text-[9px] text-gray-500 leading-tight">
+              <div className="text-[11px] text-gray-500 leading-tight">
                 High overlap with your current audience
               </div>
             </div>
@@ -80,20 +73,20 @@ export function IdeaEvaluationMock() {
             <div className="bg-white rounded-lg border border-gray-200 p-3 shadow-sm">
               <div className="flex items-center gap-1.5 mb-2">
                 <TrendingUp className="w-3.5 h-3.5 text-gray-400" />
-                <div className="text-[10px] text-gray-600 uppercase tracking-wide">Viewer Demand</div>
+                <div className="text-[12px] text-gray-600 uppercase tracking-wide">Viewer Demand</div>
               </div>
               <div className="text-3xl mb-1 text-green-600">74</div>
-              <div className="text-[9px] text-gray-400 mb-2">/100</div>
+              <div className="text-[11px] text-gray-400 mb-2">/100</div>
               <div className="w-full h-1.5 bg-gray-100 rounded-full overflow-hidden mb-2">
                 <div 
                   className="h-full rounded-full bg-green-500" 
                   style={{ width: '74%' }}
                 ></div>
               </div>
-              <div className="text-[9px] px-1.5 py-0.5 rounded bg-green-50 text-green-600 inline-block mb-1">
+              <div className="text-[11px] px-2 py-0.5 rounded bg-green-50 text-green-600 inline-block mb-1">
                 Rising
               </div>
-              <div className="text-[9px] text-gray-500 leading-tight">
+              <div className="text-[11px] text-gray-500 leading-tight">
                 Strong performance across similar channels
               </div>
             </div>
@@ -102,20 +95,20 @@ export function IdeaEvaluationMock() {
             <div className="bg-white rounded-lg border border-gray-200 p-3 shadow-sm">
               <div className="flex items-center gap-1.5 mb-2">
                 <ArrowUpRight className="w-3.5 h-3.5 text-gray-400" />
-                <div className="text-[10px] text-gray-600 uppercase tracking-wide">Growth</div>
+                <div className="text-[12px] text-gray-600 uppercase tracking-wide">Growth</div>
               </div>
               <div className="text-3xl mb-1" style={{ color: '#4F7FFF' }}>78</div>
-              <div className="text-[9px] text-gray-400 mb-2">/100</div>
+              <div className="text-[11px] text-gray-400 mb-2">/100</div>
               <div className="w-full h-1.5 bg-gray-100 rounded-full overflow-hidden mb-2">
                 <div 
                   className="h-full rounded-full" 
                   style={{ width: '78%', background: '#4F7FFF' }}
                 ></div>
               </div>
-              <div className="text-[9px] px-1.5 py-0.5 rounded bg-blue-50 inline-block mb-1" style={{ color: '#4F7FFF' }}>
+              <div className="text-[11px] px-2 py-0.5 rounded bg-blue-50 inline-block mb-1" style={{ color: '#4F7FFF' }}>
                 Audience Expansion
               </div>
-              <div className="text-[9px] text-gray-500 leading-tight">
+              <div className="text-[11px] text-gray-500 leading-tight">
                 Reaches beyond core audience
               </div>
             </div>
@@ -124,20 +117,20 @@ export function IdeaEvaluationMock() {
             <div className="bg-white rounded-lg border border-gray-200 p-3 shadow-sm">
               <div className="flex items-center gap-1.5 mb-2">
                 <AlertCircle className="w-3.5 h-3.5 text-gray-400" />
-                <div className="text-[10px] text-gray-600 uppercase tracking-wide">Execution Risk</div>
+                <div className="text-[12px] text-gray-600 uppercase tracking-wide">Execution Risk</div>
               </div>
               <div className="text-3xl mb-1 text-orange-500">High</div>
-              <div className="text-[9px] text-gray-400 mb-2">&nbsp;</div>
+              <div className="text-[11px] text-gray-400 mb-2">&nbsp;</div>
               <div className="w-full h-1.5 bg-gray-100 rounded-full overflow-hidden mb-2">
                 <div 
                   className="h-full rounded-full bg-orange-400" 
                   style={{ width: '70%' }}
                 ></div>
               </div>
-              <div className="text-[9px] px-1.5 py-0.5 rounded bg-orange-50 text-orange-600 inline-block mb-1">
+              <div className="text-[11px] px-2 py-0.5 rounded bg-orange-50 text-orange-600 inline-block mb-1">
                 Medium-High
               </div>
-              <div className="text-[9px] text-gray-500 leading-tight">
+              <div className="text-[11px] text-gray-500 leading-tight">
                 Needs strong packaging to stand out
               </div>
             </div>
@@ -146,20 +139,20 @@ export function IdeaEvaluationMock() {
             <div className="bg-white rounded-lg border border-gray-200 p-3 shadow-sm">
               <div className="flex items-center gap-1.5 mb-2">
                 <Clock className="w-3.5 h-3.5 text-gray-400" />
-                <div className="text-[10px] text-gray-600 uppercase tracking-wide">Timing</div>
+                <div className="text-[12px] text-gray-600 uppercase tracking-wide">Timing</div>
               </div>
               <div className="text-2xl mb-1 text-green-600">Good</div>
-              <div className="text-[9px] text-gray-400 mb-2">&nbsp;</div>
+              <div className="text-[11px] text-gray-400 mb-2">&nbsp;</div>
               <div className="w-full h-1.5 bg-gray-100 rounded-full overflow-hidden mb-2">
                 <div 
                   className="h-full rounded-full bg-green-500" 
                   style={{ width: '75%' }}
                 ></div>
               </div>
-              <div className="text-[9px] px-1.5 py-0.5 rounded bg-green-50 text-green-600 inline-block mb-1">
+              <div className="text-[11px] px-2 py-0.5 rounded bg-green-50 text-green-600 inline-block mb-1">
                 Good Timing
               </div>
-              <div className="text-[9px] text-gray-500 leading-tight">
+              <div className="text-[11px] text-gray-500 leading-tight">
                 Interest currently trending upward
               </div>
             </div>
@@ -178,30 +171,30 @@ export function IdeaEvaluationMock() {
             
             <div className="relative z-10">
               {/* Title */}
-              <div className="text-[10px] tracking-widest text-white/70 uppercase mb-3">
+              <div className="text-[12px] tracking-widest text-white/70 uppercase mb-3">
                 AI Recommendation
               </div>
 
               {/* Main Verdict and Role */}
               <div className="flex items-center gap-3 mb-4">
                 <div className="px-5 py-2 bg-white/95 rounded-full">
-                  <span className="text-lg tracking-wide" style={{ color: '#4F7FFF' }}>
+                  <span className="text-xl tracking-wide" style={{ color: '#4F7FFF' }}>
                     TEST SOON
                   </span>
                 </div>
                 <div className="flex items-center gap-1.5 px-3 py-1.5 bg-white/20 rounded-full backdrop-blur-sm">
                   <ArrowUpRight className="w-3 h-3 text-white" />
-                  <span className="text-xs text-white">Expansion Video</span>
+                  <span className="text-sm text-white">Expansion Video</span>
                 </div>
               </div>
 
               {/* Reasoning Summary */}
-              <div className="text-sm italic text-white/95 mb-5 leading-relaxed">
+              <div className="text-base italic text-white/95 mb-5 leading-relaxed">
                 Strong audience fit and rising demand. Needs a sharper angle to reduce execution risk.
               </div>
 
               {/* Recommended Video Topics */}
-              <div className="text-[10px] tracking-widest text-white/70 uppercase mb-3">
+              <div className="text-[12px] tracking-widest text-white/70 uppercase mb-3">
                 Recommended Video Topics
               </div>
 
@@ -210,11 +203,11 @@ export function IdeaEvaluationMock() {
                 <div className="bg-white/95 rounded-lg p-3 cursor-pointer hover:bg-white transition-all hover:scale-105 group">
                   <div className="flex items-start gap-2 mb-2">
                     <Zap className="w-3.5 h-3.5 flex-shrink-0 mt-0.5" style={{ color: '#4F7FFF' }} />
-                    <div className="text-xs text-gray-900 leading-tight">
+                    <div className="text-base text-gray-900 leading-tight">
                       "Best Budget Laptops Under $500"
                     </div>
                   </div>
-                  <div className="text-[9px] px-2 py-1 rounded-full bg-green-50 text-green-700 inline-block">
+                  <div className="text-[11px] px-2 py-1 rounded-full bg-green-50 text-green-700 inline-block">
                     Safe Version
                   </div>
                 </div>
@@ -223,11 +216,11 @@ export function IdeaEvaluationMock() {
                 <div className="bg-white/95 rounded-lg p-3 cursor-pointer hover:bg-white transition-all hover:scale-105 group">
                   <div className="flex items-start gap-2 mb-2">
                     <Zap className="w-3.5 h-3.5 flex-shrink-0 mt-0.5" style={{ color: '#4F7FFF' }} />
-                    <div className="text-xs text-gray-900 leading-tight">
+                    <div className="text-base text-gray-900 leading-tight">
                       "Why Cheap Laptops Are Getting Worse"
                     </div>
                   </div>
-                  <div className="text-[9px] px-2 py-1 rounded-full inline-block" style={{ background: '#E8EEFF', color: '#4F7FFF' }}>
+                  <div className="text-[11px] px-2 py-1 rounded-full inline-block" style={{ background: '#E8EEFF', color: '#4F7FFF' }}>
                     Growth Angle
                   </div>
                 </div>
@@ -236,11 +229,11 @@ export function IdeaEvaluationMock() {
                 <div className="bg-white/95 rounded-lg p-3 cursor-pointer hover:bg-white transition-all hover:scale-105 group">
                   <div className="flex items-start gap-2 mb-2">
                     <Zap className="w-3.5 h-3.5 flex-shrink-0 mt-0.5" style={{ color: '#4F7FFF' }} />
-                    <div className="text-xs text-gray-900 leading-tight">
+                    <div className="text-base text-gray-900 leading-tight">
                       "Are $300 Laptops a Scam?"
                     </div>
                   </div>
-                  <div className="text-[9px] px-2 py-1 rounded-full bg-purple-50 text-purple-700 inline-block">
+                  <div className="text-[11px] px-2 py-1 rounded-full bg-purple-50 text-purple-700 inline-block">
                     High-CTR Hook
                   </div>
                 </div>
@@ -265,7 +258,7 @@ export function IdeaEvaluationMock() {
             <div className="relative z-10">
               {/* Header */}
               <div className="flex items-center justify-between mb-2">
-                <div className="text-[10px] tracking-widest uppercase" style={{ color: '#4F7FFF' }}>
+                <div className="text-[12px] tracking-widest uppercase" style={{ color: '#4F7FFF' }}>
                   Next Actions For This Idea
                 </div>
               </div>
@@ -279,10 +272,10 @@ export function IdeaEvaluationMock() {
                       <Zap className="w-3.5 h-3.5 text-white" />
                     </div>
                   </div>
-                  <div className="text-[14px] text-center mb-0.5" style={{ color: '#2D3B8F' }}>
+                  <div className="text-[17px] text-center mb-0.5" style={{ color: '#2D3B8F' }}>
                     Improve the Angle
                   </div>
-                  <div className="text-[9px] text-center text-gray-600 leading-tight">
+                  <div className="text-[12px] text-center text-gray-600 leading-tight">
                     Generate stronger concept variations
                   </div>
                 </button>
@@ -294,10 +287,10 @@ export function IdeaEvaluationMock() {
                       <Play className="w-3.5 h-3.5 text-white" />
                     </div>
                   </div>
-                  <div className="text-[14px] text-center mb-0.5" style={{ color: '#2D3B8F' }}>
+                  <div className="text-[17px] text-center mb-0.5" style={{ color: '#2D3B8F' }}>
                     Test Better Titles
                   </div>
-                  <div className="text-[9px] text-center text-gray-600 leading-tight">
+                  <div className="text-[12px] text-center text-gray-600 leading-tight">
                     Explore high-CTR hooks
                   </div>
                 </button>
@@ -309,10 +302,10 @@ export function IdeaEvaluationMock() {
                       <BarChart3 className="w-3.5 h-3.5 text-white" />
                     </div>
                   </div>
-                  <div className="text-[14px] text-center mb-0.5" style={{ color: '#2D3B8F' }}>
+                  <div className="text-[17px] text-center mb-0.5" style={{ color: '#2D3B8F' }}>
                     Validate Market Demand
                   </div>
-                  <div className="text-[9px] text-center text-gray-600 leading-tight">
+                  <div className="text-[12px] text-center text-gray-600 leading-tight">
                     See how similar videos perform
                   </div>
                 </button>
@@ -324,10 +317,10 @@ export function IdeaEvaluationMock() {
                       <CheckSquare className="w-3.5 h-3.5 text-white" />
                     </div>
                   </div>
-                  <div className="text-[14px] text-center mb-0.5" style={{ color: '#2D3B8F' }}>
+                  <div className="text-[17px] text-center mb-0.5" style={{ color: '#2D3B8F' }}>
                     Turn Into Video Plan
                   </div>
-                  <div className="text-[9px] text-center text-gray-600 leading-tight">
+                  <div className="text-[12px] text-center text-gray-600 leading-tight">
                     Outline structure and hook
                   </div>
                 </button>
@@ -336,8 +329,6 @@ export function IdeaEvaluationMock() {
             </div>
           </div> 
 
-        </div>
-      </div>
     </div>
   );
 }
